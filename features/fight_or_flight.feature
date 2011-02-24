@@ -6,17 +6,15 @@ Feature: Fight or flight
 	so I can increase the ninja survival rate
 	
 	Background:
-		Given I have the following ninjas:
-			| fighter                  |  strength  | 
+		Given I have the following ninjas with skills:
+			| fighter                  |  skill     | 
 			| a third level black-belt |  20        |
 			| been in training         |  8         |
-		And I have the following opponents:
-			| fighter                  |  strength  | 
-			| samurai                  |  15        |
+		And I have the following opponents with skills:
+			| fighter                  |  skill     | 
+			| a samurai                |  15        |
 			| Chuck Norris             |  999999999 |
 			| a cat                    |  1         |
-		And   I am on "home"
-		When  I follow "Calculator" 
 	
 	Scenario: Weaker opponent
 		Given the ninja has a third level black-belt
