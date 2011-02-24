@@ -1,0 +1,8 @@
+﻿%h2 Add movies to the library
+
+- using( Html.BeginForm("Calculator", "Fight") )
+  = Html.Label("My Ninja")
+  = Html.DropDownList("MyNinja", null, new { id = "my_ninja" })
+  = Html.Label("The Opponent")
+  = Html.DropDownList("Opponent", null, new { id = "opponent" })
+  = Html.Submit("Calculate")

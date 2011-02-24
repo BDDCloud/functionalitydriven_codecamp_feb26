@@ -1,6 +1,6 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using System.Web.Mvc;
-using System.Web.UI.WebControls;
 using MavenThought.MediaLibrary.Core;
 using MavenThought.MediaLibrary.Domain;
 
@@ -23,7 +23,6 @@ namespace MavenThought.MediaLibrary.WebClient.Controllers
         public MoviesController(IMediaLibrary library)
         {
             _library = library;
-//System.Web.Mvc.Html.LabelExtensions.LabelFor()
         }
 
         /// <summary>

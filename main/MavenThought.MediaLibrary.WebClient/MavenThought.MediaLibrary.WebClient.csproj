@@ -96,6 +96,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\AboutController.cs" />
+    <Compile Include="Controllers\FightController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MoviesController.cs" />
     <Compile Include="Global.asax.cs">
@@ -137,6 +138,12 @@
     <Content Include="Content\Images\media_imgs.gif" />
     <None Include="Content\Site.less" />
     <None Include="Views\About\Index.haml">
+      <SubType>ASPXCodeBehind</SubType>
+    </None>
+    <None Include="Views\Fight\Calculator.haml">
+      <SubType>ASPXCodeBehind</SubType>
+    </None>
+    <None Include="Views\Fight\Result.haml">
       <SubType>ASPXCodeBehind</SubType>
     </None>
     <None Include="Views\Movies\Create.haml">

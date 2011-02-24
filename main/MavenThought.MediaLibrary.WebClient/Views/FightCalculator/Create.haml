@@ -1,0 +1,6 @@
+﻿%h2 Determine whether to engage the opponent
+
+- using( Html.BeginForm("Create", "FightCalculator") )
+  = Html.Label("Your Ninja")
+  = Html.TextBox("ninja", string.Empty, new { id = "ninja_skill" })
+  = Html.Submit("Calculate")

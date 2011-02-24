@@ -12,5 +12,8 @@ component "MoviesController", MoviesController:
 component "AboutController", AboutController:
   @lifestyle = "transient"
 
+component "FightController", FightController:
+  @lifestyle = "transient"
+
 component IMediaLibrary, StorageMediaLibrary:
   databaseFile = "C:/temp/movielib.db"

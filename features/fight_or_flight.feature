@@ -5,6 +5,10 @@ Feature: Fight or flight
 		based on their skill levels
 	so I can increase the ninja survival rate
 	
+	Background:
+		And   I am on "home"
+		When  I follow "Calculator" 
+	
 	Scenario: Weaker opponent
 		Given the ninja has a third level black-belt
 		When attacked by a samurai
