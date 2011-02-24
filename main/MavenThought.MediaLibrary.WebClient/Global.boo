@@ -17,3 +17,6 @@ component "FightController", FightController:
 
 component IMediaLibrary, StorageMediaLibrary:
   databaseFile = "C:/temp/movielib.db"
+
+component INinjaCommander, StorageNinjaCommander:
+  databaseFile = "C:/temp/ninjacommander.db"

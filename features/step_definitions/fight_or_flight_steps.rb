@@ -14,3 +14,24 @@ end
 Then /^the ninja should run for his life$/ do
   Then  %{I should see "Run for his life"}
 end
+
+
+Given /^I have the following opponents:$/ do |table|
+ # table is a Cucumber::Ast::Table
+  db = SQLite3::Database.new( "C:/temp/ninjacommander.db" )
+  db.execute( "delete from Opponent" )  
+  table.hashes.each do | row |
+	db.execute( "insert into Opponent ('Description', 'Strength') values ('#{row['fighter']}', '#{row['strength']}')" )  
+  end
+  db.close
+end
+
+Given /^I have the following ninjas:$/ do |table|
+ # table is a Cucumber::Ast::Table
+  db = SQLite3::Database.new( "C:/temp/ninjacommander.db" )
+  db.execute( "delete from Ninja" )  
+  table.hashes.each do | row |
+	db.execute( "insert into Ninja ('Description', 'Strength') values ('#{row['fighter']}', '#{row['strength']}')" )  
+  end
+  db.close
+end

@@ -57,10 +57,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IFighter.cs" />
+    <Compile Include="INinja.cs" />
+    <Compile Include="INinjaCommander.cs" />
     <Compile Include="IMediaElement.cs" />
     <Compile Include="IMediaLibrary.cs" />
     <Compile Include="IMediaReview.cs" />
     <Compile Include="IMovie.cs" />
+    <Compile Include="IOpponent.cs" />
     <Compile Include="IPerson.cs" />
     <Compile Include="IReviewEngine.cs" />
     <Compile Include="ISearchEngine.cs" />
