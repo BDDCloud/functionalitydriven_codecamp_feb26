@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Web.Mvc;
 
 namespace MavenThought.MediaLibrary.WebClient.Controllers
@@ -14,32 +15,72 @@ namespace MavenThought.MediaLibrary.WebClient.Controllers
         /// </summary>
         public ActionResult Calculator()
         {
-
-            ViewData["MyNinja"] = new List<SelectListItem>() { 
+            ViewData["myNinja"] = new List<SelectListItem>() { 
                 new SelectListItem{ Selected=true, Text="a third level black-belt", Value = "3" },
-                new SelectListItem{ Text="Ninja in Training", Value = "1" } };
+                new SelectListItem{ Text="ninja in training", Value = "1" } };
 
-            ViewData["Opponent"] = new List<SelectListItem>() { 
-                new SelectListItem{ Selected=true, Text="samurai", Value = "2" },
-                new SelectListItem{ Text="Chuck Norris", Value = "999999" } };
+            ViewData["opponent"] = new List<SelectListItem>() { 
+                new SelectListItem{ Selected=true, Text="a samurai", Value = "2" },
+                new SelectListItem{ Text="Chuck Norris", Value = "4" } };
             
             return View();
         }
 
         /// <summary>
-        /// Adds a movie to the library using the title
+        /// Calculating whether to fight ro flight
         /// </summary>
-        /// <param name="title">Title to use for the movie</param>
-        /// <returns>Redirect to the index</returns>
-        //[AcceptVerbs(HttpVerbs.Post)]
-        //public ActionResult Calculate()
-        //{
-        //    var ninjaPower = double.Parse(ViewData["MyNinja"].ToString());
-        //    var opponentPower = double.Parse(ViewData["Opponent"].ToString());
+        /// <param name="myNinja"></param>
+        /// <param name="opponent"></param>
+        /// <returns></returns>
+        [AcceptVerbs(HttpVerbs.Post)]
+        public ActionResult Calculator(string myNinja, string opponent)
+        {
+            var ninjaPower = CalculateStrengthOfFighter(myNinja);
+            var opponentPower = CalculateStrengthOfFighter(opponent);
 
-        //    ViewData["result"] = ninjaPower > opponentPower ? "Engage opponent" : "Run away";
+            var redirectUrl = ninjaPower > opponentPower ? Redirect("Fight") : Redirect("Flight");
 
-        //    return Redirect("Result");
-        //}
+            return redirectUrl;
+        }
+
+        /// <summary>
+        /// Fight the opponent
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult Fight()
+        {
+            return View();
+        }
+
+        /// <summary>
+        /// Run for his life
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult Flight()
+        {
+            return View();
+        }
+
+        /// <summary>
+        /// Calculate strength of fighter
+        /// </summary>
+        /// <param name="fighter"></param>
+        /// <returns>The strength of that fighter</returns>
+        private double CalculateStrengthOfFighter(string fighter)
+        {
+            switch (fighter)
+            {
+                case "1":
+                    return 1;
+                case "3":
+                    return 3;
+                case "2":
+                    return 2;
+                case "4":
+                    return double.MaxValue;
+                default:
+                    return -1;
+            }
+        }
     }
 }

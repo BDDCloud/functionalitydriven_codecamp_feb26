@@ -125,7 +125,9 @@
     <Content Include="Scripts\MicrosoftMvcAjax.debug.js" />
     <Content Include="Scripts\MicrosoftMvcValidation.js" />
     <Content Include="Scripts\MicrosoftMvcValidation.debug.js" />
-    <Content Include="Views\Web.config" />
+    <Content Include="Views\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\Images\box_head.gif" />
@@ -143,7 +145,10 @@
     <None Include="Views\Fight\Calculator.haml">
       <SubType>ASPXCodeBehind</SubType>
     </None>
-    <None Include="Views\Fight\Result.haml">
+    <None Include="Views\Fight\Flight.haml">
+      <SubType>ASPXCodeBehind</SubType>
+    </None>
+    <None Include="Views\Fight\Fight.haml">
       <SubType>ASPXCodeBehind</SubType>
     </None>
     <None Include="Views\Movies\Create.haml">
