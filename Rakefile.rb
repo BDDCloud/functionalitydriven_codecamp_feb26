@@ -62,26 +62,13 @@ namespace :test do
 
 	desc 'Run all features'
 	task :features => [:default] do
+		system "./tools/ansi132/x86/ansicon.exe -p"
+		system "cucumber"
 	end
-	
-	#desc 'Runs the test class that matches the name'
-	#task :class, [:testee] => [:default] do |t, args|
-	#	call_target msbuild_cmd, :testclass, "Testee=#{args.testee}"
-	#end
-	
-	#desc 'Runs the test class that matches the name'		
-	#msbuild :class, :testee do |msb, args|
-	#	msb.properties :type => "Testee=#{args.testee}"
-	#	msb.targets :TestClass
-	#	msb.solution = solution_file
-	#end
-	
+		
 	desc 'Runs the test class that matches the name'		
 	task :class, [:testee] => [:default] do |t, args|
 		tests = FileList["test/**/bin/debug/**/*.Tests.dll"].join " "
 		system "./tools/gallio/bin/gallio.echo.exe \"/filter:include Type:#{args.testee}\" #{tests}"
 	end
-		
-		
-	
 end

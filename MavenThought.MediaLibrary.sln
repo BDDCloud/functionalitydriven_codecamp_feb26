@@ -23,41 +23,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MavenThought.Ninja.Storage.NHibernate.Tests", "test\MavenThought.MediaLibrary.Storage.NHibernate.Tests\MavenThought.Ninja.Storage.NHibernate.Tests.csproj", "{FF21B2CA-B1A4-4CA7-8750-A7B10E53B6E0}"
 EndProject
 Global
-	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 11
-		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccLocalPath0 = .
-		SccProjectUniqueName1 = Core\\Core.csproj
-		SccProjectName1 = Core
-		SccLocalPath1 = Core
-		SccProjectUniqueName2 = MediaWeb\\MediaWeb.csproj
-		SccProjectName2 = MediaWeb
-		SccLocalPath2 = MediaWeb
-		SccProjectUniqueName3 = MediaWeb.Tests\\MediaWeb.Tests.csproj
-		SccProjectName3 = MediaWeb.Tests
-		SccLocalPath3 = MediaWeb.Tests
-		SccProjectUniqueName4 = Core.Tests\\Core.Tests.csproj
-		SccProjectName4 = Core.Tests
-		SccLocalPath4 = Core.Tests
-		SccProjectUniqueName5 = Services\\Services.csproj
-		SccProjectName5 = Services
-		SccLocalPath5 = Services
-		SccProjectUniqueName6 = MediaDesktopClient\\MediaDesktopClient.csproj
-		SccProjectName6 = MediaDesktopClient
-		SccLocalPath6 = MediaDesktopClient
-		SccProjectUniqueName7 = Core.Model.LINQ\\Core.Model.ADOEF.csproj
-		SccProjectName7 = Core.Model.LINQ
-		SccLocalPath7 = Core.Model.LINQ
-		SccProjectUniqueName8 = Core.Model.LINQ.Tests\\Core.Model.ADOEF.Tests.csproj
-		SccProjectName8 = Core.Model.LINQ.Tests
-		SccLocalPath8 = Core.Model.LINQ.Tests
-		SccProjectUniqueName9 = Core.Model.ActiveRecord\\Core.Model.ActiveRecord.csproj
-		SccProjectName9 = Core.Model.ActiveRecord
-		SccLocalPath9 = Core.Model.ActiveRecord
-		SccProjectUniqueName10 = Core.Model.ActiveRecord.Tests\\Core.Model.ActiveRecord.Tests.csproj
-		SccProjectName10 = Core.Model.ActiveRecord.Tests
-		SccLocalPath10 = Core.Model.ActiveRecord.Tests
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
