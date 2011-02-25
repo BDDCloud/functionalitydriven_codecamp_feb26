@@ -91,9 +91,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controllers\Class1.cs" />
+    <Compile Include="Controllers\When_fight_controller_has_calculator_view_retrieved.cs">
+      <DependentUpon>FightControllerSpecification.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controllers\FightControllerSpecification.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\CalculatorViewModelSpecification.cs" />
+    <Compile Include="ViewModels\When_calculator_view_model_is_created.cs">
+      <DependentUpon>CalculatorViewModelSpecification.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\main\MavenThought.MediaLibrary.Domain\MavenThought.Ninja.Domain.csproj">

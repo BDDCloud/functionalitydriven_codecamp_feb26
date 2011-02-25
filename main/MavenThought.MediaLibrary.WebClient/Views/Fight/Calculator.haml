@@ -2,7 +2,7 @@
 
 - using( Html.BeginForm("Calculator", "Fight") )
   = Html.Label("My Ninja")
-  = Html.DropDownList("myNinja", null, new { id = "my_ninja" })
+  = Html.DropDownList("myNinja", Model.Ninjas, new { id = "my_ninja" })
   = Html.Label("The Opponent")
-  = Html.DropDownList("opponent", null, new { id = "opponent" })
+  = Html.DropDownList("opponent", Model.Opponents, new { id = "opponent" })
   = Html.Submit("Calculate")

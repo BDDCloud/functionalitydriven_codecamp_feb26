@@ -1,3 +1,5 @@
+require 'sqlite3'
+
 Given /^the ninja has ([^"]*)$/ do |skill|
 	Given %{I am on "home"}
 	And %{I follow "Calculator"}

@@ -1,6 +1,7 @@
 ﻿using System.Linq;
 using System.Web.Mvc;
 using MavenThought.MediaLibrary.Domain;
+using MavenThought.MediaLibrary.WebClient.ViewModels;
 
 namespace MavenThought.MediaLibrary.WebClient.Controllers
 {
@@ -15,12 +16,19 @@ namespace MavenThought.MediaLibrary.WebClient.Controllers
         private readonly INinjaCommander _ninjaCommander;
 
         /// <summary>
+        /// Calculator view model
+        /// </summary>
+        private readonly ICalculatorViewModel _calculatorViewModel;
+
+        /// <summary>
         /// Inject ninja commander into fight controller
         /// </summary>
         /// <param name="ninjaCommander"></param>
-        public FightController(INinjaCommander ninjaCommander)
+        /// <param name="calculatorViewModel"></param>
+        public FightController(INinjaCommander ninjaCommander, ICalculatorViewModel calculatorViewModel)
         {
             _ninjaCommander = ninjaCommander;
+            _calculatorViewModel = calculatorViewModel;
         }
 
         /// <summary>
@@ -28,13 +36,7 @@ namespace MavenThought.MediaLibrary.WebClient.Controllers
         /// </summary>
         public ActionResult Calculator()
         {
-            var ninjaListItems = _ninjaCommander.Ninjas.Select(n => new SelectListItem() { Text = n.Description });
-            var opponentListItems = _ninjaCommander.Opponents.Select(n => new SelectListItem() { Text = n.Description });
-
-            ViewData["myNinja"] = ninjaListItems;
-            ViewData["opponent"] = opponentListItems;
-            
-            return View();
+            return View(_calculatorViewModel);
         }
 
         /// <summary>
