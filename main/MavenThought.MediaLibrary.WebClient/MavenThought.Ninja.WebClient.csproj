@@ -132,12 +132,6 @@
   <ItemGroup>
     <Content Include="Content\Images\box_head.gif" />
     <Content Include="Content\Images\header_background.png" />
-    <Content Include="Content\Images\Local\Blazing Saddles.jpg" />
-    <Content Include="Content\Images\Local\Empty DVD case.jpg" />
-    <Content Include="Content\Images\Local\Space Balls.jpg" />
-    <Content Include="Content\Images\Local\Young Frankestein.jpg" />
-    <Content Include="Content\Images\media_frenzy_logo.gif" />
-    <Content Include="Content\Images\media_imgs.gif" />
     <None Include="Content\Site.less" />
     <None Include="Views\About\Index.haml">
       <SubType>ASPXCodeBehind</SubType>
@@ -170,9 +164,9 @@
       <Project>{56484E7F-B200-43EF-924B-BAE916E8E631}</Project>
       <Name>MavenThought.Ninja.Core</Name>
     </ProjectReference>
-    <ProjectReference Include="..\MavenThought.MediaLibrary.Domain\MavenThough.Ninja.Domain.csproj">
+    <ProjectReference Include="..\MavenThought.MediaLibrary.Domain\MavenThought.Ninja.Domain.csproj">
       <Project>{B0460A37-24B0-4826-8BB7-AFFDA8A40B0F}</Project>
-      <Name>MavenThough.Ninja.Domain</Name>
+      <Name>MavenThought.Ninja.Domain</Name>
     </ProjectReference>
     <ProjectReference Include="..\MavenThought.MediaLibrary.Storage.NHibernate\MavenThought.Ninja.Storage.NHibernate.csproj">
       <Project>{058D869F-B50A-49F7-B93B-8B5F0EEDE9EB}</Project>
@@ -180,6 +174,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Content\Images\Local\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

@@ -90,9 +90,9 @@
       <Project>{56484E7F-B200-43EF-924B-BAE916E8E631}</Project>
       <Name>MavenThought.Ninja.Core</Name>
     </ProjectReference>
-    <ProjectReference Include="..\MavenThought.MediaLibrary.Domain\MavenThough.Ninja.Domain.csproj">
+    <ProjectReference Include="..\MavenThought.MediaLibrary.Domain\MavenThought.Ninja.Domain.csproj">
       <Project>{B0460A37-24B0-4826-8BB7-AFFDA8A40B0F}</Project>
-      <Name>MavenThough.Ninja.Domain</Name>
+      <Name>MavenThought.Ninja.Domain</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

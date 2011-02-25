@@ -60,18 +60,7 @@
     <Compile Include="IFighter.cs" />
     <Compile Include="INinja.cs" />
     <Compile Include="INinjaCommander.cs" />
-    <Compile Include="IMediaElement.cs" />
-    <Compile Include="IMediaLibrary.cs" />
-    <Compile Include="IMediaReview.cs" />
-    <Compile Include="IMovie.cs" />
     <Compile Include="IOpponent.cs" />
-    <Compile Include="IPerson.cs" />
-    <Compile Include="IReviewEngine.cs" />
-    <Compile Include="ISearchEngine.cs" />
-    <Compile Include="IUser.cs" />
-    <Compile Include="IUserAdministrator.cs" />
-    <Compile Include="IUserIdentification.cs" />
-    <Compile Include="IUserRole.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

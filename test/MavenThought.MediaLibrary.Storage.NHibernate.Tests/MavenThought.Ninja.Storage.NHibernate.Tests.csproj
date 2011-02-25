@@ -113,9 +113,9 @@
       <Project>{56484E7F-B200-43EF-924B-BAE916E8E631}</Project>
       <Name>MavenThought.Ninja.Core</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\main\MavenThought.MediaLibrary.Domain\MavenThough.Ninja.Domain.csproj">
+    <ProjectReference Include="..\..\main\MavenThought.MediaLibrary.Domain\MavenThought.Ninja.Domain.csproj">
       <Project>{B0460A37-24B0-4826-8BB7-AFFDA8A40B0F}</Project>
-      <Name>MavenThough.Ninja.Domain</Name>
+      <Name>MavenThought.Ninja.Domain</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\main\MavenThought.MediaLibrary.Storage.NHibernate\MavenThought.Ninja.Storage.NHibernate.csproj">
       <Project>{058D869F-B50A-49F7-B93B-8B5F0EEDE9EB}</Project>
