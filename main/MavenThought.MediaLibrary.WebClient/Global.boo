@@ -6,17 +6,11 @@ import MavenThought.MediaLibrary.Domain
 component "HomeController", HomeController:
   @lifestyle = "transient"
 
-component "MoviesController", MoviesController:
-  @lifestyle = "transient"
-  
 component "AboutController", AboutController:
   @lifestyle = "transient"
 
 component "FightController", FightController:
   @lifestyle = "transient"
-
-component IMediaLibrary, StorageMediaLibrary:
-  databaseFile = "C:/temp/movielib.db"
 
 component INinjaCommander, StorageNinjaCommander:
   databaseFile = "C:/temp/ninjacommander.db"

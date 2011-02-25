@@ -5,10 +5,10 @@ using MavenThought.MediaLibrary.WebClient.Controllers;
 namespace MavenThought.MediaLibrary.WebClient.Tests.Controllers
 {
     /// <summary>
-    /// Base specification for MoviesController
+    /// Base specification for FightController
     /// </summary>
-    public abstract class MoviesControllerSpecification
-        : AutoMockSpecificationWithNoContract<MoviesController>
+    public abstract class FightControllerSpecification
+        : AutoMockSpecificationWithNoContract<FightController>
     {
         protected ActionResult ActualResult { get; set; }
     }

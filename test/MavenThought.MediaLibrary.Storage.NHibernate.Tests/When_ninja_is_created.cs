@@ -8,7 +8,7 @@ namespace MavenThought.MediaLibrary.Storage.NHibernate.Tests
     /// Specification when persistent product is created
     /// </summary>
     [ConstructorSpecification]
-    public class When_movie_is_created : PersistentMovieSpecification
+    public class When_ninja_is_created : PersistentNinjaSpecification
     {
         /// <summary>
         /// Validates the mapping
@@ -17,8 +17,9 @@ namespace MavenThought.MediaLibrary.Storage.NHibernate.Tests
         public void Should_have_the_right_mappings()
         {
             this.Sut.AutoSession(s =>
-                                     new PersistenceSpecification<Movie>(s)
-                                         .CheckProperty(p => p.Title, "Space Balls")
+                                     new PersistenceSpecification<Ninja>(s)
+                                         .CheckProperty(p => p.Strength, "Space Balls")
+                                         .CheckProperty(p => p.Description, "Space Balls")
                                          .VerifyTheMappings());
         }
     }

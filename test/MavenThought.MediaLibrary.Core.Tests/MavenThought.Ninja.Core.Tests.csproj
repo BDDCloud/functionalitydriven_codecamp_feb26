@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{8F05E772-D46A-4C8E-9D02-E6660C27BC61}</ProjectGuid>
+    <ProjectGuid>{86DFB313-7551-4820-BFFD-2D63FEDECE53}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MavenThought.MediaLibrary.WebClient.Tests</RootNamespace>
-    <AssemblyName>MavenThought.MediaLibrary.WebClient.Tests</AssemblyName>
+    <RootNamespace>MavenThought.MediaLibrary.Core.Tests</RootNamespace>
+    <AssemblyName>MavenThought.MediaLibrary.Core.Tests</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <FileUpgradeFlags>
@@ -38,12 +38,6 @@
     <Reference Include="Gallio, Version=3.2.0.0, Culture=neutral, PublicKeyToken=eb9cfa67ee6ab36e, processorArchitecture=MSIL">
       <HintPath>..\..\lib\gallio-3.2.601\Gallio.dll</HintPath>
     </Reference>
-    <Reference Include="log4net">
-      <HintPath>..\..\lib2\nhibernate\log4net.dll</HintPath>
-    </Reference>
-    <Reference Include="MavenThought.Commons">
-      <HintPath>..\..\lib\maventhought.commons-0.3.0\lib\MavenThought.Commons.dll</HintPath>
-    </Reference>
     <Reference Include="MavenThought.Commons.Testing, Version=0.3.1.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\lib\maventhought.testing-0.3.2\MavenThought.Commons.Testing.dll</HintPath>
@@ -51,13 +45,7 @@
     <Reference Include="MbUnit, Version=3.2.0.0, Culture=neutral, PublicKeyToken=eb9cfa67ee6ab36e, processorArchitecture=MSIL">
       <HintPath>..\..\lib\gallio-3.2.601\MbUnit.dll</HintPath>
     </Reference>
-    <Reference Include="MvcContrib">
-      <HintPath>..\..\lib2\mvccontrib\MvcContrib.dll</HintPath>
-    </Reference>
-    <Reference Include="MvcContrib.TestHelper">
-      <HintPath>..\..\lib2\mvccontrib\MvcContrib.TestHelper.dll</HintPath>
-    </Reference>
-    <Reference Include="Rhino.Mocks, Version=3.6.0.0, Culture=neutral, PublicKeyToken=0b3305902db7183f, processorArchitecture=MSIL">
+    <Reference Include="Rhino.Mocks">
       <HintPath>..\..\lib\rhino.mocks-3.6.0.0\Rhino.Mocks.dll</HintPath>
     </Reference>
     <Reference Include="SharpTestsEx">
@@ -73,14 +61,6 @@
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
-    <Reference Include="System.Web" />
-    <Reference Include="System.Web.Abstractions">
-      <RequiredTargetFramework>3.5</RequiredTargetFramework>
-    </Reference>
-    <Reference Include="System.Web.Mvc, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
-    <Reference Include="System.Web.Routing">
-      <RequiredTargetFramework>3.5</RequiredTargetFramework>
-    </Reference>
     <Reference Include="System.Xml.Linq">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
@@ -91,36 +71,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controllers\MoviesControllerSpecification.cs" />
-    <Compile Include="Controllers\When_movies_controller_calls_index_action.cs">
-      <DependentUpon>MoviesControllerSpecification.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Controllers\When_movies_controller_creates_a_movie.cs">
-      <DependentUpon>MoviesControllerSpecification.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Controllers\When_movies_controller_submits_form_to_create_a_movie.cs">
-      <DependentUpon>MoviesControllerSpecification.cs</DependentUpon>
-    </Compile>
+    <Compile Include="NinjaSpecification.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\main\MavenThought.MediaLibrary.Domain\MavenThought.MediaLibrary.Domain.csproj">
+    <ProjectReference Include="..\..\main\MavenThought.MediaLibrary.Core\MavenThought.Ninja.Core.csproj">
+      <Project>{56484E7F-B200-43EF-924B-BAE916E8E631}</Project>
+      <Name>MavenThought.Ninja.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\main\MavenThought.MediaLibrary.Domain\MavenThough.Ninja.Domain.csproj">
       <Project>{B0460A37-24B0-4826-8BB7-AFFDA8A40B0F}</Project>
-      <Name>MavenThought.MediaLibrary.Domain</Name>
+      <Name>MavenThough.Ninja.Domain</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\main\MavenThought.MediaLibrary.WebClient\MavenThought.MediaLibrary.WebClient.csproj">
-      <Project>{9EE1A5A0-A74A-42BF-B1EE-F816EF53239B}</Project>
-      <Name>MavenThought.MediaLibrary.WebClient</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Helpers\ImageHelperSpecification.cs" />
-    <Compile Include="Helpers\When_image_helper_local_title_exists.cs">
-      <DependentUpon>ImageHelperSpecification.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Helpers\When_image_helper_local_title_does_not_exists.cs">
-      <DependentUpon>ImageHelperSpecification.cs</DependentUpon>
-    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

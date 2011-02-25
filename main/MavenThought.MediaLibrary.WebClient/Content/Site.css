@@ -10,7 +10,7 @@ body, html {
   height: 79px;
   width: 100%;
   background: URL(/content/images/header_background.png) repeat-x;
-  color:rgb(39, 99, 165);
+  color:rgb(88EB10 39, 99, 165);
   font-size:60px;
   font-family:Verdana;
   font-weight:bold;
@@ -26,6 +26,17 @@ body, html {
     position:absolute;
     margin-left:550px;
     top:0px;
+}
+
+#mascot {
+  margin: 0px;
+  height: 250px;
+  width: 239px;
+  background: URL(/content/images/ninja_cucumber.png) no-repeat;
+  color:#88EB10;;
+  font-size:30px;
+  font-family:Verdana;
+  font-weight:bold;
 }
 
 #menu {

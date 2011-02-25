@@ -7,27 +7,29 @@ using SharpTestsEx;
 namespace MavenThought.MediaLibrary.Storage.NHibernate.Tests
 {
     /// <summary>
-    /// Specification when adding the movie to the storage
+    /// Specification when adding the ninja to the storage
     /// </summary>
     [Specification]
-    public class When_persistent_movie_is_added_to_the_storage : PersistentMovieSpecification
+    public class When_persistent_ninja_is_added_to_the_storage : PersistentNinjaSpecification
     {
         /// <summary>
         /// Object to store
         /// </summary>
-        private Movie _movie;
+        private Ninja _ninja;
+        
         /// <summary>
         /// Actual collection obtained
         /// </summary>
-        private IList<Movie> _actual;
+        private IList<Ninja> _actual;
 
         /// <summary>
-        /// Checks the movie is stored
+        /// Checks the ninja is stored
         /// </summary>
         [It]
-        public void Should_retrieve_same_movie()
+        public void Should_retrieve_same_ninja()
         {
-            this._actual.First().Title.Should().Be.EqualTo(this._movie.Title);
+            this._actual.First().Strength.Should().Be.EqualTo(this._ninja.Strength);
+            this._actual.First().Description.Should().Be.EqualTo(this._ninja.Description);
         }
 
         /// <summary>
@@ -40,31 +42,31 @@ namespace MavenThought.MediaLibrary.Storage.NHibernate.Tests
         }
 
         /// <summary>
-        /// Setup the movie we want to store
+        /// Setup the ninja we want to store
         /// </summary>
         protected override void GivenThat()
         {
             base.GivenThat();
 
-            this._movie = new Movie() { Title = "Blazing Saddles" };
+            this._ninja = new Ninja { Description = "Third dan black belt", Strength = 72 };
         }
 
         /// <summary>
-        /// Store the movie
+        /// Store the ninja
         /// </summary>
         protected override void AndGivenThatAfterCreated()
         {
             base.AndGivenThatAfterCreated();
 
-            this.Sut.AutoCommit(session => session.Save(this._movie));
+            this.Sut.AutoCommit(session => session.Save(this._ninja));
         }
 
         /// <summary>
-        /// Retrieve the movie from the storage
+        /// Retrieve the ninja from the storage
         /// </summary>
         protected override void WhenIRun()
         {
-            this._actual = this.Sut.List<Movie>();
+            this._actual = this.Sut.List<Ninja>();
         }
     }
 }

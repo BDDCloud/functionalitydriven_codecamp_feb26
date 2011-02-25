@@ -6,8 +6,8 @@ namespace MavenThought.MediaLibrary.Core.Tests
     /// <summary>
     /// Base specification for Movie
     /// </summary>
-    public abstract class MovieSpecification
-        : AutoMockSpecification<Movie, IMovie>
+    public abstract class NinjaSpecification
+        : AutoMockSpecification<Ninja, IFighter>
     {
     }
 }

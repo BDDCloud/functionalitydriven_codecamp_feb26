@@ -4,20 +4,23 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{BD744581-CAA3-4190-8142-120AF23E9C41}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Features", "Features", "{D082D8D2-B98B-495F-8AF5-ED8BBA0D701D}"
+	ProjectSection(SolutionItems) = preProject
+		features\fight_or_flight.feature = features\fight_or_flight.feature
+	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MavenThought.MediaLibrary.Domain", "main\MavenThought.MediaLibrary.Domain\MavenThought.MediaLibrary.Domain.csproj", "{B0460A37-24B0-4826-8BB7-AFFDA8A40B0F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MavenThough.Ninja.Domain", "main\MavenThought.MediaLibrary.Domain\MavenThough.Ninja.Domain.csproj", "{B0460A37-24B0-4826-8BB7-AFFDA8A40B0F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MavenThought.MediaLibrary.WebClient", "main\MavenThought.MediaLibrary.WebClient\MavenThought.MediaLibrary.WebClient.csproj", "{9EE1A5A0-A74A-42BF-B1EE-F816EF53239B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MavenThought.Ninja.WebClient", "main\MavenThought.MediaLibrary.WebClient\MavenThought.Ninja.WebClient.csproj", "{9EE1A5A0-A74A-42BF-B1EE-F816EF53239B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MavenThought.MediaLibrary.Core", "main\MavenThought.MediaLibrary.Core\MavenThought.MediaLibrary.Core.csproj", "{56484E7F-B200-43EF-924B-BAE916E8E631}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MavenThought.Ninja.Core", "main\MavenThought.MediaLibrary.Core\MavenThought.Ninja.Core.csproj", "{56484E7F-B200-43EF-924B-BAE916E8E631}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MavenThought.MediaLibrary.Core.Tests", "test\MavenThought.MediaLibrary.Core.Tests\MavenThought.MediaLibrary.Core.Tests.csproj", "{86DFB313-7551-4820-BFFD-2D63FEDECE53}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MavenThought.Ninja.Core.Tests", "test\MavenThought.MediaLibrary.Core.Tests\MavenThought.Ninja.Core.Tests.csproj", "{86DFB313-7551-4820-BFFD-2D63FEDECE53}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MavenThought.MediaLibrary.WebClient.Tests", "test\MavenThought.MediaLibrary.WebClient.Tests\MavenThought.MediaLibrary.WebClient.Tests.csproj", "{8F05E772-D46A-4C8E-9D02-E6660C27BC61}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MavenThought.Ninja.WebClient.Tests", "test\MavenThought.MediaLibrary.WebClient.Tests\MavenThought.Ninja.WebClient.Tests.csproj", "{8F05E772-D46A-4C8E-9D02-E6660C27BC61}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MavenThought.MediaLibrary.Storage.NHibernate", "main\MavenThought.MediaLibrary.Storage.NHibernate\MavenThought.MediaLibrary.Storage.NHibernate.csproj", "{058D869F-B50A-49F7-B93B-8B5F0EEDE9EB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MavenThought.Ninja.Storage.NHibernate", "main\MavenThought.MediaLibrary.Storage.NHibernate\MavenThought.Ninja.Storage.NHibernate.csproj", "{058D869F-B50A-49F7-B93B-8B5F0EEDE9EB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MavenThought.MediaLibrary.Storage.NHibernate.Tests", "test\MavenThought.MediaLibrary.Storage.NHibernate.Tests\MavenThought.MediaLibrary.Storage.NHibernate.Tests.csproj", "{FF21B2CA-B1A4-4CA7-8750-A7B10E53B6E0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MavenThought.Ninja.Storage.NHibernate.Tests", "test\MavenThought.MediaLibrary.Storage.NHibernate.Tests\MavenThought.Ninja.Storage.NHibernate.Tests.csproj", "{FF21B2CA-B1A4-4CA7-8750-A7B10E53B6E0}"
 EndProject
 Global
 	GlobalSection(TeamFoundationVersionControl) = preSolution

@@ -1,17 +1,17 @@
 ﻿!!!
 %html{xmlns="http://www.w3.org/1999/xhtml"}
   %head
-    %title Media Library
+    %title Ninja Commander
     %link{href="../../Content/Site.css" rel="stylesheet" type="text/css"}
     %link{href="../../Content/tabs.css" rel="stylesheet" type="text/css"}
   %body
     #header
-      Media Library
+      Ninja Commander
     #menu
-      = Html.ActionLink( "Browse contents", "Index", "Movies" )
-      = Html.ActionLink( "Add Media", "Create", "Movies", null, new { id = "create" } )
-      = Html.ActionLink( "About", "Index", "About" )
+      = Html.ActionLink( "Home", "Index", "Home" )
       = Html.ActionLink( "Fight Calculator", "Calculator", "Fight", null, new { id = "fight_calculator" } )
+      = Html.ActionLink( "Army", "Index", "About" )
+      = Html.ActionLink( "About", "Index", "About" )
     #content
       _
     #sidebar
