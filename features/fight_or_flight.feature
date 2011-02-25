@@ -14,7 +14,7 @@ Feature: Fight or flight
 			| fighter                  |  skill     | 
 			| a samurai                |  15        |
 			| Chuck Norris             |  999999999 |
-			| a cat                    |  1         |
+			| an evil siamese cat      |  1         |
 	
 	Scenario: Weaker opponent
 		Given the ninja has a third level black-belt
@@ -29,6 +29,6 @@ Feature: Fight or flight
 @cat		
 	Scenario: Trainee versus Cat
 		Given the ninja has been in training
-		When attacked by a cat
+		When attacked by an evil siamese cat
 		Then the ninja should engage the opponent
 				
