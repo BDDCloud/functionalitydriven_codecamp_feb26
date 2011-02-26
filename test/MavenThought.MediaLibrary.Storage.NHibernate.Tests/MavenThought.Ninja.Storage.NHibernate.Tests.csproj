@@ -97,15 +97,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PersistentNinjaSpecification.cs" />
+    <Compile Include="PersistentFighterSpecification.cs" />
     <Compile Include="StorageNinjaCommanderSpecification.cs" />
     <Compile Include="BaseStorageSpecification.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="When_ninja_is_created.cs">
-      <DependentUpon>PersistentNinjaSpecification.cs</DependentUpon>
+    <Compile Include="When_fighter_is_created.cs">
+      <DependentUpon>PersistentFighterSpecification.cs</DependentUpon>
     </Compile>
-    <Compile Include="When_persistent_ninja_is_added_to_the_storage.cs">
-      <DependentUpon>PersistentNinjaSpecification.cs</DependentUpon>
+    <Compile Include="When_persistent_fighter_is_added_to_the_storage.cs">
+      <DependentUpon>PersistentFighterSpecification.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

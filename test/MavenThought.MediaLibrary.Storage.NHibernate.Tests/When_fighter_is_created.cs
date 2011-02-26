@@ -8,7 +8,7 @@ namespace MavenThought.MediaLibrary.Storage.NHibernate.Tests
     /// Specification when persistent product is created
     /// </summary>
     [ConstructorSpecification]
-    public class When_ninja_is_created : PersistentNinjaSpecification
+    public class When_fighter_is_created : PersistentFighterSpecification
     {
         /// <summary>
         /// Validates the mapping
@@ -17,9 +17,10 @@ namespace MavenThought.MediaLibrary.Storage.NHibernate.Tests
         public void Should_have_the_right_mappings()
         {
             this.Sut.AutoSession(s =>
-                                     new PersistenceSpecification<Ninja>(s)
-                                         .CheckProperty(p => p.Strength, "Space Balls")
-                                         .CheckProperty(p => p.Description, "Space Balls")
+                                     new PersistenceSpecification<Fighter>(s)
+                                         .CheckProperty(p => p.Strength, 20)
+                                         .CheckProperty(p => p.Description, "third dan black belt")
+                                         .CheckProperty(p => p.Class, "ninja")
                                          .VerifyTheMappings());
         }
     }

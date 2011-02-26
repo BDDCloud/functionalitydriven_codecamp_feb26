@@ -58,9 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IFighter.cs" />
-    <Compile Include="INinja.cs" />
     <Compile Include="INinjaCommander.cs" />
-    <Compile Include="IOpponent.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -10,17 +10,17 @@ namespace MavenThought.MediaLibrary.Storage.NHibernate.Tests
     /// Specification when adding the ninja to the storage
     /// </summary>
     [Specification]
-    public class When_persistent_ninja_is_added_to_the_storage : PersistentNinjaSpecification
+    public class When_persistent_fighter_is_added_to_the_storage : PersistentFighterSpecification
     {
         /// <summary>
         /// Object to store
         /// </summary>
-        private Ninja _ninja;
+        private Fighter _ninja;
         
         /// <summary>
         /// Actual collection obtained
         /// </summary>
-        private IList<Ninja> _actual;
+        private IList<Fighter> _actual;
 
         /// <summary>
         /// Checks the ninja is stored
@@ -30,6 +30,7 @@ namespace MavenThought.MediaLibrary.Storage.NHibernate.Tests
         {
             this._actual.First().Strength.Should().Be.EqualTo(this._ninja.Strength);
             this._actual.First().Description.Should().Be.EqualTo(this._ninja.Description);
+            this._actual.First().Class.Should().Be.EqualTo(this._ninja.Class);
         }
 
         /// <summary>
@@ -48,7 +49,7 @@ namespace MavenThought.MediaLibrary.Storage.NHibernate.Tests
         {
             base.GivenThat();
 
-            this._ninja = new Ninja { Description = "Third dan black belt", Strength = 72 };
+            this._ninja = new Fighter { Description = "Third dan black belt", Strength = 72, Class = "Ninja" };
         }
 
         /// <summary>
@@ -66,7 +67,7 @@ namespace MavenThought.MediaLibrary.Storage.NHibernate.Tests
         /// </summary>
         protected override void WhenIRun()
         {
-            this._actual = this.Sut.List<Ninja>();
+            this._actual = this.Sut.List<Fighter>();
         }
     }
 }

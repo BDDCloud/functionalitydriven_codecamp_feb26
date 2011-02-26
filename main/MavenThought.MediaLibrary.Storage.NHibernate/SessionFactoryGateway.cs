@@ -27,8 +27,7 @@ namespace MavenThought.MediaLibrary.Storage.NHibernate
                 .ExposeConfiguration(buildSchema)
                 .ExposeConfiguration(AddProxyConfiguration)
                 .Database(configurer)
-                .Mappings(m => m.AutoMappings.Add(AutoMap.AssemblyOf<Ninja>()))
-                .Mappings(m => m.AutoMappings.Add(AutoMap.AssemblyOf<Opponent>()))
+                .Mappings(m => m.AutoMappings.Add(AutoMap.AssemblyOf<Fighter>()))
                 .BuildSessionFactory();
         }
 

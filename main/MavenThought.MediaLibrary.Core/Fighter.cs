@@ -1,11 +1,11 @@
-﻿using MavenThought.MediaLibrary.Domain;
+using MavenThought.MediaLibrary.Domain;
 
 namespace MavenThought.MediaLibrary.Core
 {
     /// <summary>
-    /// Implementation of opponent
+    /// Implementation of fighter
     /// </summary>
-    public class Opponent : IFighter
+    public class Fighter : IFighter
     {
         /// <summary>
         /// Gets or sets the id of the figter
@@ -21,5 +21,10 @@ namespace MavenThought.MediaLibrary.Core
         /// Strength of fighter
         /// </summary>
         public virtual double Strength { get; set; }
+
+        /// <summary>
+        /// Class of fighter
+        /// </summary>
+        public virtual string Class { get; set; }
     }
 }

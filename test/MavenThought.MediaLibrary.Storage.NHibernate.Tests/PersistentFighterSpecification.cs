@@ -5,8 +5,8 @@ namespace MavenThought.MediaLibrary.Storage.NHibernate.Tests
     /// <summary>
     /// Base specification for Persistent Ninja
     /// </summary>
-    public abstract class PersistentNinjaSpecification
-        : BaseStorageSpecification<Ninja>
+    public abstract class PersistentFighterSpecification
+        : BaseStorageSpecification<Fighter>
     {
     }
 }

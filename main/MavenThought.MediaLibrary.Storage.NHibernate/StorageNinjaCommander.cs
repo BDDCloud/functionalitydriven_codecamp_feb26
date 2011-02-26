@@ -63,7 +63,7 @@ namespace MavenThought.MediaLibrary.Storage.NHibernate
         {
             get
             {
-                var result = this._factory.List<Ninja>()
+                var result = this._factory.List<Fighter>().Where(f => f.Class=="ninja")
                                              .Cast<IFighter>();
 
                 return result;
@@ -77,7 +77,7 @@ namespace MavenThought.MediaLibrary.Storage.NHibernate
         {
             get
             {
-                var result = this._factory.List<Opponent>()
+                var result = this._factory.List<Fighter>().Where(f => f.Class=="opponent")
                                              .Cast<IFighter>();
 
                 return result;
@@ -102,7 +102,7 @@ namespace MavenThought.MediaLibrary.Storage.NHibernate
         /// <returns></returns>
         protected double StrengthOfNinja(string description)
         {
-            var result = this._factory.List<Ninja>().Find(n => n.Description == description);
+            var result = Ninjas.Find(n => n.Description == description);
             return result == null ? -1 : result.Strength;
         }
 
@@ -113,7 +113,7 @@ namespace MavenThought.MediaLibrary.Storage.NHibernate
         /// <returns></returns>
         protected double StrengthOfOpponent(string description)
         {
-            var result = this._factory.List<Opponent>().Find(n => n.Description == description);
+            var result = Opponents.Find(n => n.Description == description);
             return result == null ? -1 : result.Strength;
         }
 
